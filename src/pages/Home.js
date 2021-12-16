@@ -1,9 +1,11 @@
 import React from "react";
-import Nav from "../components/Nav"
+
+import Cover from "../components/Cover";
+
 function Home() {
   return (
     <div>
-      <Nav />
+      <Cover />
     </div>
   );
 }

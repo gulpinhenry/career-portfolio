@@ -17,3 +17,100 @@
     margin: auto 0;
     margin-right: 10px;
 }
+#cover-container{
+    /* add background image here ig */
+    min-height: 80vh;
+    border: yellow 2px solid;
+}
+#title-container{
+    position: relative;
+    top: 20vh;
+    /* border: 2px solid white; */
+    text-align: center;
+    margin: 0 5%;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+#title-name{
+    font-size: 100%;
+    z-index: 5;
+}
+#title-occupation{
+    /* font-size: 80%; */
+    margin-top: -50px;
+    line-height: 120%;
+    font-size: 130%;
+    font-weight: bold;
+}
+#title-contact {
+    border: 2px solid #EDEDED;
+    padding: 8px 14px;
+    margin: 0 30%;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+#title-contact:hover {
+    background-color: #EDEDED; /* Green */
+    color: #171717;
+  }
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    #title-name{
+        font-size: 150%;
+    }
+    #title-occupation{
+        /* font-size: 80%; */
+        line-height: 120%;
+        font-size: 180%;
+        margin-top: -40px;
+    }
+    
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    #title-container{
+        position: relative;
+        top: 20vh;
+        text-align: left;
+        margin: 0 5%;
+    }
+    #title-name{
+        font-size: 200%;
+    }
+    #title-occupation{
+        /* font-size: 80%; */
+        line-height: 175%;
+        font-size: 250%;
+    }
+    #title-contact {
+        
+        margin: 0 80%;
+        margin-left: 0;
+        font-size: 16px;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    #cover-container{
+        min-height: 100vh;
+    }
+    #title-contact {
+        padding: 12px 20px;
+        font-size: 18px;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    #title-contact {
+        margin: 0 85%;
+        margin-left: 0;
+    }
+}

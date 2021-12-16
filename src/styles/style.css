@@ -1,0 +1,19 @@
+*{  
+  background-color: #171717;  
+  color: #EDEDED;
+}
+#navbar{
+    background-color: transparent;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+}
+#navbar-logo{
+    margin: auto 0;
+    margin-left: 10px;
+}
+#hamburger-icon{
+    max-height: 30px;
+    margin: auto 0;
+    margin-right: 10px;
+}

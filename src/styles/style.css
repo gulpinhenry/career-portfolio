@@ -26,6 +26,7 @@
     position: relative;
     top: 20vh;
     /* border: 2px solid white; */
+    background-color: transparent;
     text-align: center;
     margin: 0 5%;
     height: 40vh;

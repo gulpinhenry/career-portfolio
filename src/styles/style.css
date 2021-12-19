@@ -21,6 +21,7 @@
     /* add background image here ig */
     min-height: 80vh;
     border: yellow 2px solid;
+    margin-bottom: 30px;
 }
 #title-container{
     position: relative;
@@ -45,32 +46,84 @@
     font-size: 130%;
     font-weight: bold;
 }
-#title-contact {
+.reg-button{
+    background-color: transparent;
     border: 2px solid #EDEDED;
     padding: 8px 14px;
-    margin: 0 30%;
-    font-size: 12px;
     cursor: pointer;
+    font-size: 12px;
     border-radius: 8px;
 }
+#title-contact {
+    margin: 0 30%;
+}
 
-#title-contact:hover {
-    background-color: #EDEDED; /* Green */
+button:hover {
+    background-color: #EDEDED;
     color: #171717;
-  }
+}
+#bio-container{
+    border: 2px solid pink;
+    background-color: #191A19;
+}
+#bio-main{
+    background-color: transparent;
+    margin: 10px;
+    margin-bottom: 0px;
+}
+#bio-main h4{
+    background-color: transparent;
+    color: white;
+}
+#bio-main h1{
+    background-color: transparent;
+}
+#bio-main p{
+    background-color: transparent;
+    color: lightgray;
+    text-align: justify;
+}
+#bio-main a{
+    background-color: transparent;
+}
+#bio-aside{
+    background-color: transparent;
+    margin: 20px 25px;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#bio-img{
+    background-color: transparent;
+    object-fit: contain;
+    margin: 0 auto;
+    max-width: 80%;
+    max-height: 80%;
+    padding: 20px;
+    border: 2px solid #444444;
+}
+
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
     #title-name{
         font-size: 150%;
     }
-    #title-occupation{
+    /* #title-occupation{
+        line-height: 120%;
+        font-size: 180%;
+        margin-top: -40px;
+    } */
+    .reg-button{
         /* font-size: 80%; */
         line-height: 120%;
         font-size: 180%;
         margin-top: -40px;
     }
-    
+    #resume-btn{
+        font-size: 100%;
+    }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -91,9 +144,20 @@
     }
     #title-contact {
         
+        /* margin: 0 80%;
+        margin-left: 0;
+        font-size: 16px; */
+    }
+    .reg-button{
         margin: 0 80%;
         margin-left: 0;
         font-size: 16px;
+    }
+    #bio-aside{
+        display: none;
+    }
+    #resume-btn{
+        width: 25%;
     }
 }
 
@@ -103,8 +167,35 @@
         min-height: 100vh;
     }
     #title-contact {
+        /* padding: 12px 20px;
+        font-size: 18px; */
+    }
+    .reg-button{
         padding: 12px 20px;
         font-size: 18px;
+    }
+    #bio-container{
+        display: flex;
+    }
+    #bio-main{
+        flex-basis: 40%;
+        padding-left: 10%;
+        padding-right: 10%;
+        /* border: 2px solid green; */
+    }
+    #bio-aside{
+        /* border: 2px solid green; */
+        display: inline;
+        flex-basis: 40%;
+        height: 80vh;
+    }
+    #bio-img{
+        margin: auto auto;
+        max-width: 80%;
+        max-height: 80%;
+    }
+    #resume-btn{
+        width: 200px;
     }
 }
 

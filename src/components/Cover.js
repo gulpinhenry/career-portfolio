@@ -42,7 +42,7 @@ export default function Cover() {
                 </Slide>
                 {/* TODO: direct to contact info on click  */}
                 <Slide direction="right" in={slid} container={containerRef.current} timeout={{ enter: 500 }} mountOnEnter unmountOnExit>
-                    <button id="title-contact">Contact Me</button>
+                    <button className = "reg-button" id="title-contact">Contact Me</button>
                 </Slide>
 
             </div>

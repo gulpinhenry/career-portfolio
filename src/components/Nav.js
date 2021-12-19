@@ -11,7 +11,7 @@ function ButtonAppBar() {
     return (
         <nav id="navbar">
             <div id = "navbar-logo">Some Logo Here</div>
-                <img src={hamburger} id = "hamburger-icon" onClick={toggleDrawer}></img>
+                <img src={hamburger} id = "hamburger-icon" onClick={toggleDrawer} alt='hamburger icon'></img>
         </nav>
     );
 }

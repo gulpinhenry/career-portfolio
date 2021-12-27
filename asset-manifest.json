@@ -1,22 +1,29 @@
 {
   "files": {
-    "main.css": "/career-portfolio/static/css/main.48ac6224.chunk.css",
-    "main.js": "/career-portfolio/static/js/main.97b7e6f4.chunk.js",
-    "main.js.map": "/career-portfolio/static/js/main.97b7e6f4.chunk.js.map",
-    "runtime-main.js": "/career-portfolio/static/js/runtime-main.52ea8462.js",
-    "runtime-main.js.map": "/career-portfolio/static/js/runtime-main.52ea8462.js.map",
-    "static/js/2.8e3c5550.chunk.js": "/career-portfolio/static/js/2.8e3c5550.chunk.js",
-    "static/js/2.8e3c5550.chunk.js.map": "/career-portfolio/static/js/2.8e3c5550.chunk.js.map",
-    "static/js/3.a0ae8cb0.chunk.js": "/career-portfolio/static/js/3.a0ae8cb0.chunk.js",
-    "static/js/3.a0ae8cb0.chunk.js.map": "/career-portfolio/static/js/3.a0ae8cb0.chunk.js.map",
+    "main.css": "/career-portfolio/static/css/main.393dbfae.chunk.css",
+    "main.js": "/career-portfolio/static/js/main.bfcf6bb0.chunk.js",
+    "main.js.map": "/career-portfolio/static/js/main.bfcf6bb0.chunk.js.map",
+    "runtime-main.js": "/career-portfolio/static/js/runtime-main.3df52374.js",
+    "runtime-main.js.map": "/career-portfolio/static/js/runtime-main.3df52374.js.map",
+    "static/js/2.1be110fe.chunk.js": "/career-portfolio/static/js/2.1be110fe.chunk.js",
+    "static/js/2.1be110fe.chunk.js.map": "/career-portfolio/static/js/2.1be110fe.chunk.js.map",
+    "static/js/3.5fbb06f1.chunk.js": "/career-portfolio/static/js/3.5fbb06f1.chunk.js",
+    "static/js/3.5fbb06f1.chunk.js.map": "/career-portfolio/static/js/3.5fbb06f1.chunk.js.map",
     "index.html": "/career-portfolio/index.html",
-    "static/css/main.48ac6224.chunk.css.map": "/career-portfolio/static/css/main.48ac6224.chunk.css.map",
-    "static/js/2.8e3c5550.chunk.js.LICENSE.txt": "/career-portfolio/static/js/2.8e3c5550.chunk.js.LICENSE.txt"
+    "static/css/main.393dbfae.chunk.css.map": "/career-portfolio/static/css/main.393dbfae.chunk.css.map",
+    "static/js/2.1be110fe.chunk.js.LICENSE.txt": "/career-portfolio/static/js/2.1be110fe.chunk.js.LICENSE.txt",
+    "static/media/art.e3e96be3.jpg": "/career-portfolio/static/media/art.e3e96be3.jpg",
+    "static/media/books.bf786fbb.jpg": "/career-portfolio/static/media/books.bf786fbb.jpg",
+    "static/media/btc.c7db439c.jpg": "/career-portfolio/static/media/btc.c7db439c.jpg",
+    "static/media/budget.ebeb1043.jpeg": "/career-portfolio/static/media/budget.ebeb1043.jpeg",
+    "static/media/stocks.9667d3c4.jpeg": "/career-portfolio/static/media/stocks.9667d3c4.jpeg",
+    "static/media/template.be632089.png": "/career-portfolio/static/media/template.be632089.png",
+    "static/media/weather.a7cbf892.jfif": "/career-portfolio/static/media/weather.a7cbf892.jfif"
   },
   "entrypoints": [
-    "static/js/runtime-main.52ea8462.js",
-    "static/js/2.8e3c5550.chunk.js",
-    "static/css/main.48ac6224.chunk.css",
-    "static/js/main.97b7e6f4.chunk.js"
+    "static/js/runtime-main.3df52374.js",
+    "static/js/2.1be110fe.chunk.js",
+    "static/css/main.393dbfae.chunk.css",
+    "static/js/main.bfcf6bb0.chunk.js"
   ]
 }

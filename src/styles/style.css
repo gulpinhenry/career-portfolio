@@ -118,11 +118,12 @@ button:hover {
 #portfolio-container{
     text-align: center;
 }
-#portfolio-list{
+#portfolio-list, #article-list{
     list-style-type: none;
     display: flex;
     flex-wrap: wrap;
-    margin: auto auto;
+    /* margin: auto auto; */
+    padding-inline-start: 0px;
     justify-content: center;
 }
 #portfolio-list li{
@@ -131,8 +132,6 @@ button:hover {
     width: 95%;
     min-height: 60%;
     height: 60%;
-    /* width: 280px;
-    height: 311px; */
 }
 #portfolio-list li a {
     border: 2px solid blue;
@@ -203,6 +202,41 @@ button:hover {
   .role{
     background-color: #202020;
   }
+  #article-container{
+      width: 100vw;
+  }
+  #article-container h4, #article-container h1{
+    text-align: center;
+  }
+  #article-container h4{
+    margin-top: 100px;
+  }
+  #article-grid{
+      /* display: flex;
+      justify-content: center;
+      align-items: center; */
+      max-width: 100vw;
+      margin: 0;
+      margin-top: 10px;
+  }
+  #article-list li{
+    border: 2px solid red;
+  }
+  .article-el{
+      display: flex;
+      justify-content: center;
+      /* margin: auto auto; */
+  }
+  .article-el a{
+    color: #fff;
+    text-decoration: none;
+}
+.article{
+    align-self: center;
+}
+.css-83ijpv-MuiTypography-root{
+    color: #fff;
+}
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
     #title-name{
@@ -321,4 +355,15 @@ button:hover {
         margin: 0 85%;
         margin-left: 0;
     }
+}
+
+@media only screen and (min-width: 1440px) {
+    #title-contact {
+        margin: 0 85%;
+        margin-left: 0;
+    }
+    #article-grid{
+        margin: 0;
+    }
+    
 }

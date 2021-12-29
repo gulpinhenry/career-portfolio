@@ -145,6 +145,64 @@ button:hover {
     object-fit: cover;
     overflow: hidden;
 }
+#recs{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #202020;
+    min-height: 50vh;
+}
+.quote-card{
+    padding-top: 10%;;
+    background-color: #202020;
+    width: 80vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.quote {
+    color: #fff;
+    background-color: #444444;
+    text-decoration: none;
+    display: inline-block;
+    width: 80%;
+    min-height: 100px;
+    padding: 20px;
+    position: relative;
+    z-index: 2;
+  }
+  .quote:after,
+  .quote:before {
+    top: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+  }
+  .quote:after {
+    border-color: transparent;
+    border-top-color: #444444;
+    border-width: 10px;
+    margin-left: -10px;
+  }
+  .quote:before {
+    border-width: 10px;
+    margin-left: -10px;
+  }
+  .avatar{
+      margin-top: 25px;
+  }
+  .quote-name{
+    background-color: #202020;
+  }
+  .role{
+    background-color: #202020;
+  }
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
     #title-name{
@@ -208,6 +266,14 @@ button:hover {
     }
     #resume-btn{
         width: 25%;
+    }
+    #recs{
+        flex-direction: row;
+        align-items: stretch;
+        justify-content: flex-end;
+    }
+    .quote{
+        flex-basis: 40%;
     }
 }
 

@@ -8,85 +8,128 @@ import stocks from "../assets/stocks.jpeg";
 import budget from "../assets/budget.jpeg";
 import weather from "../assets/weather.jfif";
 
-export default function Portfolio() {
-    const [project, setProject] = React.useState(-1);
+
+import Typography from '@mui/material/Typography';
+import Grid from '@mui/material/Grid';
+import Skeleton from '@mui/material/Skeleton';
+import Card from '@mui/material/Card';
+import CardHeader from '@mui/material/CardHeader';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+
+import Slide from '@mui/material/Slide';
+import Fade from '@mui/material/Fade';
+
+function PortfolioCard({ loadingState, title, languages, link, picture }) {
+    const [slid, setSlide] = React.useState(false);
+    const loading = loadingState ? true : false;
+    const [project, setProject] = React.useState(false);
+    const containerRef = React.useRef(null);
+    console.log(project);
     return (
-        <div id="portfolio-container">
+        <Card className="article" sx={{ width: "345px", m: 3 }}
+            onMouseEnter={() => { setProject(true); setSlide(true) }}
+            onMouseLeave={() => { setProject(false); setSlide(false) }}>
+            <a href={link} target="_blank">
+
+                {loading ? (
+                    <Skeleton sx={{ height: 450 }} animation="wave" variant="rectangular" />
+                ) : (
+                    <CardMedia
+                        component="img"
+                        height="450"
+                        image={picture}
+                        alt={title}
+                    />
+                )}
+                <CardHeader
+                    style={{ color: "#fff" }}
+                    title={
+                        loading ? (
+                            <Skeleton
+                                animation="wave"
+                                height={10}
+                                width="80%"
+                            // style={{ marginBottom: 6 }}
+                            />
+                        ) : (
+                            project ? (<Slide direction="right" in={slid} container={containerRef.current} mountOnEnter unmountOnExit><div>{title}</div></Slide>) : (<div>&nbsp;</div>)
+                        )
+                    }
+                />
+                <CardContent>
+                    {loading ? (
+                        <React.Fragment>
+                            <Skeleton animation="wave" height={10} style={{ marginBottom: 6 }} />
+                            <Skeleton animation="wave" height={10} width="80%" />
+                        </React.Fragment>
+                    ) : (
+                        project ? (<Fade in={slid} container={containerRef.current} mountOnEnter unmountOnExit><div><Typography variant="body2" color="#fff" component="p">
+                            {
+                                languages
+                            }
+                        </Typography></div></Fade>) : (
+                            <Typography variant="body2" color="#fff" component="p">
+                                &nbsp;
+                            </Typography>)
+
+                    )}
+                </CardContent>
+            </a>
+        </Card>
+    );
+}
+
+// project name, languages, link, picture
+const data = [
+    ["Cryptocraft", "Cryptocurrency Investment Simulator", "https://github.com/gulpinhenry/cryptocraft", btc],
+    ["Book Search Engine", "Personalized Online Library", "https://github.com/gulpinhenry/book-search-engine", books],
+    ["3D Gallery Walk", "3D Virtual Art Gallery of the Rijksmuseum", "https://github.com/gulpinhenry/3d-gallery-walk", art],
+    ["Moonbase", "Investment Forum with Integrated Stock Data", "https://github.com/gulpinhenry/moonbase", stocks],
+    ["Budget Tracker", "Progressive Web Application to track spending", "https://github.com/gulpinhenry/budget-tracker", budget],
+    ["Weather Dashboard", "Weekly Weather Forecast of American cities", "https://github.com/gulpinhenry/weather-dashboard", weather],
+]
+
+export default function Portfolio() {
+
+    return (
+        <div id="portfolio-container" >
             <h4>Portfolio</h4>
             <h1>Work I Have Done</h1>
-            <ul id="portfolio-list">
-                <li>
-
+            <Grid id="portfolio-grid" container spacing={{ xs: 2, md: 3 }} columns={{ xs: 2, sm: 6, md: 12 }}
+                justifyContent="center">
+                <Grid style={{ paddingLeft: 0 }} className="article-el" item xs={2} sm={4} md={4} >
                     <ScrollAnimation animateIn="fadeIn" offset={50}>
-                        <a target="_blank" href='https://github.com/gulpinhenry/cryptocraft'>
-                            <img src={btc} alt='Cryptocraft Project'
-                                onMouseEnter={() => { console.log("cryptohi"); setProject(0) }}
-                                onMouseLeave={() => { console.log("crpytobye"); setProject(-1); }}
-                            ></img>
-                        </a>
+                        <PortfolioCard title={data[0][0]} languages={data[0][1]} link={data[0][2]} picture={data[0][3]} />
                     </ScrollAnimation>
-                    {project == 0 ? <div className='portfolio-popup'><h1>cryptocraft</h1></div> : null}
-                    {/* some div with the animated stuff and info add parent animation*/}
-
-                </li>
-                <li>
+                </Grid>
+                <Grid style={{ paddingLeft: 0 }} className="article-el" item xs={2} sm={4} md={4} >
                     <ScrollAnimation animateIn="fadeIn" offset={50}>
-                        <a target="_blank" href='https://github.com/gulpinhenry/book-search-engine'>
-                            <img src={books} alt='Book Search Engine Project'
-                                onMouseEnter={() => { console.log("bookhi"); setProject(1) }}
-                                onMouseLeave={() => { console.log("bookbye"); setProject(-1); }}
-                            ></img>
-                        </a>
+                        <PortfolioCard title={data[1][0]} languages={data[1][1]} link={data[1][2]} picture={data[1][3]} />
                     </ScrollAnimation>
-                    {project == 1 ? <div className='portfolio-popup'><h1>books</h1></div> : null}
-                </li>
-                <li>
+                </Grid>
+                <Grid style={{ paddingLeft: 0 }} className="article-el" item xs={2} sm={4} md={4} >
                     <ScrollAnimation animateIn="fadeIn" offset={50}>
-                        <a target="_blank" href='https://github.com/gulpinhenry/3d-gallery-walk'>
-                            <img src={art} alt='3D Art Gallery Project'
-                                onMouseEnter={() => { console.log("arthi"); setProject(2) }}
-                                onMouseLeave={() => { console.log("artbye"); setProject(-1); }}
-                            ></img>
-                        </a>
+                        <PortfolioCard title={data[2][0]} languages={data[2][1]} link={data[2][2]} picture={data[2][3]} />
                     </ScrollAnimation>
-                    {project == 2 ? <div className='portfolio-popup'><h1>art</h1></div> : null}
-                </li>
-                <li>
+                </Grid>
+                <Grid style={{ paddingLeft: 0 }} className="article-el" item xs={2} sm={4} md={4} >
                     <ScrollAnimation animateIn="fadeIn" offset={50}>
-                        <a target="_blank" href='https://github.com/gulpinhenry/moonbase'>
-                            <img src={stocks} alt='Moonbase Project'
-                                onMouseEnter={() => { console.log("moonhi"); setProject(3) }}
-                                onMouseLeave={() => { console.log("moonbye"); setProject(-1); }}
-                            ></img>
-                        </a>
+                        <PortfolioCard title={data[3][0]} languages={data[3][1]} link={data[3][2]} picture={data[3][3]} />
                     </ScrollAnimation>
-                    {project == 3 ? <div className='portfolio-popup'><h1>moon</h1></div> : null}
-                </li>
-                <li>
+                </Grid>
+                <Grid style={{ paddingLeft: 0 }} className="article-el" item xs={2} sm={4} md={4} >
                     <ScrollAnimation animateIn="fadeIn" offset={50}>
-                        <a target="_blank" href='https://github.com/gulpinhenry/budget-tracker'>
-                            <img src={budget} alt='Budget Tracker PWA Project'
-                                onMouseEnter={() => { console.log("budgethi"); setProject(4) }}
-                                onMouseLeave={() => { console.log("budgetbye"); setProject(-1); }}
-                            ></img>
-                        </a>
+                        <PortfolioCard title={data[4][0]} languages={data[4][1]} link={data[4][2]} picture={data[4][3]} />
                     </ScrollAnimation>
-                    {project == 4 ? <div className='portfolio-popup'><h1>budget</h1></div> : null}
-                </li>
-                <li>
+                </Grid>
+                <Grid style={{ paddingLeft: 0 }} className="article-el" item xs={2} sm={4} md={4} >
                     <ScrollAnimation animateIn="fadeIn" offset={50}>
-                        <a target="_blank" href='https://github.com/gulpinhenry/weather-dashboard'>
-                            <img src={weather} alt='Weather Dashboard Project'
-                                onMouseEnter={() => { console.log("weatherhi"); setProject(5) }}
-                                onMouseLeave={() => { console.log("weatherbye"); setProject(-1); }}
-                            ></img>
-                        </a>
+                        <PortfolioCard title={data[5][0]} languages={data[5][1]} link={data[5][2]} picture={data[5][3]} />
                     </ScrollAnimation>
-                    {project == 5 ? <div className='portfolio-popup'><h1>weather</h1></div> : null}
-                </li>
-
-            </ul>
-
+                </Grid>
+            </Grid>
         </div>
+
     );
 }

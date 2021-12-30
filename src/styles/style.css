@@ -1,6 +1,7 @@
 *{  
   background-color: #171717;  
   color: #EDEDED;
+  /* overflow-x: hidden; look at the recs part if this is uncommented*/
 }
 #navbar{
     background-color: transparent;
@@ -20,7 +21,7 @@
 #cover-container{
     /* add background image here ig */
     min-height: 80vh;
-    border: yellow 2px solid;
+    /* border: yellow 2px solid; */
     margin-bottom: 30px;
 }
 #title-container{
@@ -63,12 +64,12 @@ button:hover {
     color: #171717;
 }
 #bio-container{
-    border: 2px solid pink;
+    /* border: 2px solid pink; */
     background-color: #191A19;
     align-items: stretch;
 }
 #bio-main{
-    border: 2px solid green;
+    /* border: 2px solid green; */
     background-color: transparent;
     margin: 10px;
     margin-bottom: 0px;
@@ -127,14 +128,14 @@ button:hover {
     justify-content: center;
 }
 #portfolio-list li{
-    border: 2px solid red;
+    /* border: 2px solid red; */
     margin: 10%;
     width: 95%;
     min-height: 60%;
     height: 60%;
 }
 #portfolio-list li a {
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
     width: 100%;
     height: 100%;
 }
@@ -226,7 +227,7 @@ button:hover {
       margin-top: 10px;
   }
   #article-list li{
-    border: 2px solid red;
+    /* border: 2px solid red; */
   }
   .article-el{
       display: flex;
@@ -243,6 +244,28 @@ button:hover {
 .css-83ijpv-MuiTypography-root{
     color: #fff;
 }
+#contact-container{
+    /* width: 100%; */
+    background-color: #444444;
+    padding: 10px;
+    margin: 5%;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+#contact-aside{
+    background-color: #444444;
+}
+#contact-form{
+    background-color: #444444;
+    display: flex;
+    flex-direction: column;
+}
+#contact-form textarea{
+    min-height: 100px;
+}
+
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
     #title-name{

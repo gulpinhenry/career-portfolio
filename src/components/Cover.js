@@ -14,7 +14,7 @@ export default function Cover() {
     }, []);
     return (
         <div id="cover-container">
-            <Nav />
+            {/* <Nav /> */}
 
             <div id="title-container">
                 <Slide direction="right" in={slid} container={containerRef.current} mountOnEnter unmountOnExit>

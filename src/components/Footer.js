@@ -5,14 +5,14 @@ export default function Footer() {
         <footer className="footer">
                 
                 <div className="icons">
-                    <a href="#"><i className="fa fa-github">github</i></a>
-                    <a href="#"><i className="fa fa-linkedin">linked</i></a>
-                    <a href="#"><i className="fa fa-twitter">twitter</i></a>
-                    <a href="#"><i className="fa fa-gmail"></i>gmail</a>
+                    <a href="https://github.com/gulpinhenry" target="_blank"><i className="fa fa-github">Github</i></a>
+                    <a href="https://www.linkedin.com/in/kamhenry/" target="_blank"><i className="fa fa-linkedin">LinkedIn</i></a>
+                    <a href="https://twitter.com/gulpinhenry" target="_blank"><i className="fa fa-twitter">Twitter</i></a>
+                    <a href="mailto:h3nrykam@gmail.com" target="_blank"><i className="fa fa-gmail">Gmail</i></a>
                 </div>
 
 
-                <p className="name"> Henry Kam &copy; 2021</p>
+                <p className="copyright"> Henry Kam &copy; 2021</p>
 
         </footer>
     );

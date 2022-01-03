@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/career-portfolio/static/css/main.95f020b7.chunk.css",
-    "main.js": "/career-portfolio/static/js/main.2a95ef6d.chunk.js",
-    "main.js.map": "/career-portfolio/static/js/main.2a95ef6d.chunk.js.map",
+    "main.css": "/career-portfolio/static/css/main.4b99eecb.chunk.css",
+    "main.js": "/career-portfolio/static/js/main.0c0c7781.chunk.js",
+    "main.js.map": "/career-portfolio/static/js/main.0c0c7781.chunk.js.map",
     "runtime-main.js": "/career-portfolio/static/js/runtime-main.a1281722.js",
     "runtime-main.js.map": "/career-portfolio/static/js/runtime-main.a1281722.js.map",
     "static/js/2.10fd13d7.chunk.js": "/career-portfolio/static/js/2.10fd13d7.chunk.js",
@@ -10,13 +10,15 @@
     "static/js/3.93b42e14.chunk.js": "/career-portfolio/static/js/3.93b42e14.chunk.js",
     "static/js/3.93b42e14.chunk.js.map": "/career-portfolio/static/js/3.93b42e14.chunk.js.map",
     "index.html": "/career-portfolio/index.html",
-    "static/css/main.95f020b7.chunk.css.map": "/career-portfolio/static/css/main.95f020b7.chunk.css.map",
+    "static/css/main.4b99eecb.chunk.css.map": "/career-portfolio/static/css/main.4b99eecb.chunk.css.map",
     "static/js/2.10fd13d7.chunk.js.LICENSE.txt": "/career-portfolio/static/js/2.10fd13d7.chunk.js.LICENSE.txt",
+    "static/media/style.css": "/career-portfolio/static/media/87Ie2nd.3dfc1b37.gif",
     "static/media/Henry_Resume.540727c0.pdf": "/career-portfolio/static/media/Henry_Resume.540727c0.pdf",
     "static/media/art.e3e96be3.jpg": "/career-portfolio/static/media/art.e3e96be3.jpg",
     "static/media/books.bf786fbb.jpg": "/career-portfolio/static/media/books.bf786fbb.jpg",
     "static/media/btc.c7db439c.jpg": "/career-portfolio/static/media/btc.c7db439c.jpg",
     "static/media/budget.ebeb1043.jpeg": "/career-portfolio/static/media/budget.ebeb1043.jpeg",
+    "static/media/portrait.d2f578bf.jpg": "/career-portfolio/static/media/portrait.d2f578bf.jpg",
     "static/media/stocks.9667d3c4.jpeg": "/career-portfolio/static/media/stocks.9667d3c4.jpeg",
     "static/media/template.be632089.png": "/career-portfolio/static/media/template.be632089.png",
     "static/media/weather.a7cbf892.jfif": "/career-portfolio/static/media/weather.a7cbf892.jfif"
@@ -24,7 +26,7 @@
   "entrypoints": [
     "static/js/runtime-main.a1281722.js",
     "static/js/2.10fd13d7.chunk.js",
-    "static/css/main.95f020b7.chunk.css",
-    "static/js/main.2a95ef6d.chunk.js"
+    "static/css/main.4b99eecb.chunk.css",
+    "static/js/main.0c0c7781.chunk.js"
   ]
 }

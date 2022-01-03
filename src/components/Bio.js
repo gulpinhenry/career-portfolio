@@ -1,5 +1,6 @@
 import * as React from 'react';
 import template from "../assets/template.png";
+import portrait from "../assets/portrait.jpg"
 import resume from "../assets/Henry_Resume.pdf";
 
 // TODO: Change Typography elements
@@ -18,7 +19,7 @@ function Main() {
 function Pic() {
     return (
         <div id="bio-aside">
-            <img src = {template} id = "bio-img" alt="template pic for now"></img>
+            <img src = {portrait} id = "bio-img" alt="portrait photo"></img>
         </div>
     );
 }

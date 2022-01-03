@@ -21,6 +21,10 @@
 }
 #cover-container{
     /* add background image here ig */
+    background-image: url("../assets/87Ie2nd.gif");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
     min-height: 80vh;
     /* border: yellow 2px solid; */
     margin-bottom: 30px;
@@ -40,9 +44,11 @@
 #title-name{
     font-size: 100%;
     z-index: 5;
+    background-color: transparent;
 }
 #title-occupation{
     /* font-size: 80%; */
+    background-color: transparent;
     margin-top: -50px;
     line-height: 120%;
     font-size: 130%;
@@ -67,7 +73,9 @@ button:hover {
 }
 #bio-container{
     /* border: 2px solid pink; */
-    background-color: #191A19;
+    margin-top: -30px;
+    padding-top: 30px;
+    background-color: #0C0C0C;
     align-items: stretch;
 }
 #bio-main{
@@ -152,12 +160,13 @@ button:hover {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    background-color: #202020;
+    background-color: #0C0C0C;
     min-height: 50vh;
+    padding-bottom: 30px;
 }
 .quote-card{
     padding-top: 10%;;
-    background-color: #202020;
+    background-color: transparent;
     width: 80vw;
     text-align: center;
     display: flex;
@@ -200,10 +209,10 @@ button:hover {
       margin-top: 25px;
   }
   .quote-name{
-    background-color: #202020;
+    background-color: transparent;
   }
   .role{
-    background-color: #202020;
+    background-color: transparent;
   }
   #article-container, #portfolio-container{
       width: 90vw;
@@ -246,7 +255,7 @@ button:hover {
 #contact-container{
     margin: auto auto;
     /* width: 100%; */
-    background-color: #444444;
+    background-color: #1D1D1D;
     padding: 10px;
     /* margin: 5%; */
     display: flex;
@@ -255,14 +264,14 @@ button:hover {
     justify-content: space-evenly;
 }
 #contact-container h3, #contact-container p{
-    background-color: #444444;
+    background-color: transparent;
 }
 #contact-aside{
-    background-color: #444444;
+    background-color: transparent;
     padding: 10px;
 }
 #contact-form{
-    background-color: #444444;
+    background-color: transparent;
     margin: 20px;
     display: flex;
     flex-direction: column;
@@ -287,6 +296,10 @@ button:hover {
     margin-top: 15px;
     align-self: center;
     width: 60%;
+}
+#submit-btn:hover {
+    background-color: #EDEDED;
+    color: #171717;
 }
 footer{
     margin-top: 30px;

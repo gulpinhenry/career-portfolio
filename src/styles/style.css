@@ -245,7 +245,7 @@ button:hover {
 }
 #contact-container{
     margin: auto auto;
-    width: 100%;
+    /* width: 100%; */
     background-color: #444444;
     padding: 10px;
     /* margin: 5%; */
@@ -259,6 +259,7 @@ button:hover {
 }
 #contact-aside{
     background-color: #444444;
+    padding: 10px;
 }
 #contact-form{
     background-color: #444444;
@@ -270,12 +271,15 @@ button:hover {
 }
 #contact-form input{
     margin-bottom: 15px;
-    max-width: 500px;
+    width: 75%;
     border: none;
+    align-self: center;
+    
 }
 #contact-form textarea{
     min-height: 100px;
-    max-width: 500px;
+    width: 75%;
+    align-self: center;
     border: none;
 }
 #submit-btn{
@@ -303,6 +307,12 @@ footer{
 }
 .copyright{
     margin: auto auto;
+}
+iframe{
+    border: 0;
+    border-radius: 15px;
+    width: 80%;
+    height: 70%;
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
@@ -333,30 +343,6 @@ footer{
         height: 100%;
         object-fit: fill;
     }
-    #contact-container{
-        background-color: #444444;
-        padding: 10px;
-        min-width: 100vw;
-        /* margin: 5%; */
-        display: flex;
-        flex-direction: row;
-        text-align: left;
-        justify-content: space-evenly;
-    }
-    #contact-form{
-        width: 60vw;
-        align-content: center;
-    }
-    #contact-aside{
-        margin-top: 20px;
-        text-align: center;
-    }
-    #submit-btn{
-        margin-top: 15px;
-        margin-left: 15px;
-        align-self: auto;
-        width: 40%;
-    }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -374,12 +360,6 @@ footer{
         /* font-size: 80%; */
         line-height: 175%;
         font-size: 250%;
-    }
-    #title-contact {
-        
-        /* margin: 0 80%;
-        margin-left: 0;
-        font-size: 16px; */
     }
     .reg-button{
         margin: 0 80%;
@@ -403,6 +383,23 @@ footer{
     .icons a{
         margin: 5%;
         text-decoration: none;
+    }
+    #contact-container{
+        flex-direction: row;
+        min-height: 60vh;
+    }
+    #contact-form{
+        flex-basis: 60%;
+        /* justify-content: center; */
+    }
+    input{
+        height: 25px;
+        padding: 10px;
+    }
+    textarea{
+        padding: 10px;
+        min-height: 140px;
+
     }
 }
 
@@ -450,9 +447,9 @@ footer{
         margin: 0 85%;
         margin-left: 0;
     }
-    #contact-form{
+    /* #contact-form{
         padding-left: 15%;
-    }
+    } */
 }
 
 @media only screen and (min-width: 1440px) {

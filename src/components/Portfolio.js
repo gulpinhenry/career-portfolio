@@ -20,12 +20,20 @@ import CardMedia from '@mui/material/CardMedia';
 import Slide from '@mui/material/Slide';
 import Fade from '@mui/material/Fade';
 
-function PortfolioCard({ loadingState, title, languages, link, picture }) {
+
+function PortfolioCard({ loadingState, hov, title, languages, link, picture }) {
     const [slid, setSlide] = React.useState(false);
     const loading = loadingState ? true : false;
     const [project, setProject] = React.useState(false);
     const containerRef = React.useRef(null);
-    console.log(project);
+    
+    React.useEffect(() => {
+        if(hov){
+            setProject(true);
+        }
+    });
+    console.log("hov: ", hov);
+    console.log("project", project);
     return (
         <Card className="article" sx={{ width: "345px", m: 3 }}
             onMouseEnter={() => { setProject(true); setSlide(true) }}
@@ -50,7 +58,6 @@ function PortfolioCard({ loadingState, title, languages, link, picture }) {
                                 animation="wave"
                                 height={10}
                                 width="80%"
-                            // style={{ marginBottom: 6 }}
                             />
                         ) : (
                             project ? (<Slide direction="right" in={slid} container={containerRef.current} mountOnEnter unmountOnExit><div>{title}</div></Slide>) : (<div>&nbsp;</div>)
@@ -91,7 +98,27 @@ const data = [
 ]
 
 export default function Portfolio() {
+    const [width, setWindowWidth] = React.useState(0);
+    const [hov, setHov] = React.useState(false);
+    React.useEffect(() => {
 
+        updateDimensions();
+
+        window.addEventListener("resize",  updateDimensions);
+        return () =>
+            window.removeEventListener("resize", updateDimensions);
+    }, [])
+    const updateDimensions = () => {
+        const width = window.innerWidth;
+        setWindowWidth(width);
+        if(width<=768){
+            setHov(true);
+        }
+        else{
+            setHov(false);
+        }
+    }
+    console.log(width);
     return (
         <div id="portfolio-container" >
             <h4>Portfolio</h4>
@@ -100,32 +127,32 @@ export default function Portfolio() {
                 justifyContent="center">
                 <Grid style={{ paddingLeft: 0 }} className="article-el" item xs={2} sm={4} md={4} >
                     <ScrollAnimation animateIn="fadeIn" offset={50}>
-                        <PortfolioCard title={data[0][0]} languages={data[0][1]} link={data[0][2]} picture={data[0][3]} />
+                        <PortfolioCard hov={hov} title={data[0][0]} languages={data[0][1]} link={data[0][2]} picture={data[0][3]} />
                     </ScrollAnimation>
                 </Grid>
                 <Grid style={{ paddingLeft: 0 }} className="article-el" item xs={2} sm={4} md={4} >
                     <ScrollAnimation animateIn="fadeIn" offset={50}>
-                        <PortfolioCard title={data[1][0]} languages={data[1][1]} link={data[1][2]} picture={data[1][3]} />
+                        <PortfolioCard hov={hov} title={data[1][0]} languages={data[1][1]} link={data[1][2]} picture={data[1][3]} />
                     </ScrollAnimation>
                 </Grid>
                 <Grid style={{ paddingLeft: 0 }} className="article-el" item xs={2} sm={4} md={4} >
                     <ScrollAnimation animateIn="fadeIn" offset={50}>
-                        <PortfolioCard title={data[2][0]} languages={data[2][1]} link={data[2][2]} picture={data[2][3]} />
+                        <PortfolioCard hov={hov} title={data[2][0]} languages={data[2][1]} link={data[2][2]} picture={data[2][3]} />
                     </ScrollAnimation>
                 </Grid>
                 <Grid style={{ paddingLeft: 0 }} className="article-el" item xs={2} sm={4} md={4} >
                     <ScrollAnimation animateIn="fadeIn" offset={50}>
-                        <PortfolioCard title={data[3][0]} languages={data[3][1]} link={data[3][2]} picture={data[3][3]} />
+                        <PortfolioCard hov={hov} title={data[3][0]} languages={data[3][1]} link={data[3][2]} picture={data[3][3]} />
                     </ScrollAnimation>
                 </Grid>
                 <Grid style={{ paddingLeft: 0 }} className="article-el" item xs={2} sm={4} md={4} >
                     <ScrollAnimation animateIn="fadeIn" offset={50}>
-                        <PortfolioCard title={data[4][0]} languages={data[4][1]} link={data[4][2]} picture={data[4][3]} />
+                        <PortfolioCard hov={hov} title={data[4][0]} languages={data[4][1]} link={data[4][2]} picture={data[4][3]} />
                     </ScrollAnimation>
                 </Grid>
                 <Grid style={{ paddingLeft: 0 }} className="article-el" item xs={2} sm={4} md={4} >
                     <ScrollAnimation animateIn="fadeIn" offset={50}>
-                        <PortfolioCard title={data[5][0]} languages={data[5][1]} link={data[5][2]} picture={data[5][3]} />
+                        <PortfolioCard hov={hov} title={data[5][0]} languages={data[5][1]} link={data[5][2]} picture={data[5][3]} />
                     </ScrollAnimation>
                 </Grid>
             </Grid>

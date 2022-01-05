@@ -42,7 +42,7 @@ export default function Cover() {
                 </Slide>
                 {/* TODO: direct to contact info on click  */}
                 <Slide direction="right" in={slid} container={containerRef.current} timeout={{ enter: 500 }} mountOnEnter unmountOnExit>
-                    <button className = "reg-button" id="title-contact">Contact Me</button>
+                    <a id = "contact-btn" href = "https://www.linkedin.com/in/kamhenry/" target="_blank"><button className = "reg-button" id="title-contact">Contact Me</button></a>
                 </Slide>
 
             </div>

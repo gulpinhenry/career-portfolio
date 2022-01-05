@@ -27,6 +27,7 @@
     background-size: cover; /* Resize the background image to cover the entire container */
     min-height: 80vh;
     /* border: yellow 2px solid; */
+    overflow-x: hidden;
     margin-bottom: 30px;
 }
 #title-container{
@@ -66,7 +67,9 @@ button{
 #title-contact {
     margin: 0 30%;
 }
-
+#contact-btn{
+    background-color: transparent;
+}
 button:hover {
     background-color: #EDEDED;
     color: #171717;

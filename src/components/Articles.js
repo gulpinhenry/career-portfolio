@@ -81,6 +81,7 @@ function ArticleCard({ loadingState, title, profileiconurl, time, source, link, 
 const data = [
     ["Computer Conversations: HTTP", "https://miro.medium.com/fit/c/32/32/1*SpsODOAGmK1RaO99Xp2l9g.jpeg", "11/7/21", "Medium", "https://medium.com/@h3nrykam/computer-conversations-http-73fd637c4764", "https://miro.medium.com/max/700/0*c7yYi2WnYfmcKsv6.jpg"],
     ["First Time Web Dev explains Agile in Layman\'s Terms", "https://miro.medium.com/fit/c/32/32/1*SpsODOAGmK1RaO99Xp2l9g.jpeg", "8/9/21", "Medium", "https://medium.com/@h3nrykam/first-time-web-dev-explains-agile-in-laymans-terms-e72c3f973035", "https://miro.medium.com/max/700/1*E48UPV4i4hneLPey6XRYFw.gif"],
+    ["GraphQL: Is it the Future?", "https://miro.medium.com/fit/c/32/32/1*SpsODOAGmK1RaO99Xp2l9g.jpeg", "1/5/22", "Medium", "https://medium.com/@h3nrykam/graphql-is-it-the-future-9e10a978dc42", "https://miro.medium.com/max/1400/1*dCDgJXIStlhz9v8anDeiRw.png"]
 ]
 
 export default function Articles() {
@@ -93,6 +94,11 @@ export default function Articles() {
                 justifyContent="center">
                 <Grid style={{ paddingLeft: 0 }} className="article-el" item xs>
                     <ScrollAnimation animateIn="fadeIn" offset={50}>
+                        <ArticleCard title={data[2][0]} profileiconurl={data[2][1]} time={data[2][2]} source={data[2][3]} link={data[2][4]} imagelink={data[2][5]} />
+                    </ScrollAnimation>
+                </Grid>
+                <Grid style={{ paddingLeft: 0 }} className="article-el" item xs>
+                    <ScrollAnimation animateIn="fadeIn" offset={50}>
                         <ArticleCard title={data[0][0]} profileiconurl={data[0][1]} time={data[0][2]} source={data[0][3]} link={data[0][4]} imagelink={data[0][5]} />
                     </ScrollAnimation>
                 </Grid>
@@ -101,11 +107,11 @@ export default function Articles() {
                         <ArticleCard title={data[1][0]} profileiconurl={data[1][1]} time={data[1][2]} source={data[1][3]} link={data[1][4]} imagelink={data[1][5]} />
                     </ScrollAnimation>
                 </Grid>
-                <Grid style={{ paddingLeft: 0 }} className="article-el" item xs>
+                {/* <Grid style={{ paddingLeft: 0 }} className="article-el" item xs>
                     <ScrollAnimation animateIn="fadeIn" offset={50}>
                         <ArticleCard loadingState />
                     </ScrollAnimation>
-                </Grid>
+                </Grid> */}
             </Grid>
         </div>
 
